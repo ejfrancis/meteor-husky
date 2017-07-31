@@ -1,7 +1,7 @@
 {
-  "name": "husky",
+  "name": "meteor-husky",
   "version": "0.14.3",
-  "description": "Prevents bad commit or push (git hooks, pre-commit/precommit, pre-push/prepush, post-merge/postmerge and all that stuff...)",
+  "description": "Husky for the Meteor framework. Prevents bad commit or push (git hooks, pre-commit/precommit, pre-push/prepush, post-merge/postmerge and all that stuff...)",
   "engines": {
     "node": ">=4"
   },
@@ -13,9 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/typicode/husky.git"
+    "url": "git://github.com/ejfrancis/meteor-husky.git"
   },
   "keywords": [
+    "Meteor",
     "git",
     "hook",
     "hooks",
@@ -32,9 +33,9 @@
   "author": "Typicode <typicode@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/typicode/husky/issues"
+    "url": "https://github.com/ejfrancis/meteor-husky/issues"
   },
-  "homepage": "https://github.com/typicode/husky",
+  "homepage": "https://github.com/ejfrancis/meteor-husky",
   "devDependencies": {
     "jest": "^20.0.4",
     "mkdirp": "^0.5.1",

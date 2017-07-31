@@ -60,7 +60,7 @@ yarn remove husky
 
 ### Debug hooks easily
 
-If you need to debug hooks, simply use `npm run <script-name>`. For example:
+If you need to debug hooks, simply use `meteor npm run <script-name>`. For example:
 
 ```bash
 npm run precommit
@@ -85,7 +85,7 @@ Git params can be found in `GIT_PARAMS` environment variable.
 By default, husky will run scripts using `--silent` to make the output more readable. If you want to override this, simply pass a different log level to your scripts:
 
 ```json
-"precommit": "npm run some-script -q"
+"precommit": "meteor npm run some-script -q"
 ```
 
 _`-q/--quiet` is equivalent to `--loglevel warn` which is npm default log level._
