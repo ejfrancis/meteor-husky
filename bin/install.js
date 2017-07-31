@@ -5,7 +5,7 @@ const path = require('path')
 const isCI = require('is-ci')
 const installFrom = require('../src/install')
 
-console.log('husky')
+console.log('meteor-husky')
 
 if (isCI && !process.env.HUSKY_IGNORE_CI) {
   console.log('CI detected, skipping Git hooks installation')

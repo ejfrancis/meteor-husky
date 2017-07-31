@@ -76,7 +76,7 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
     stripIndent(
       `
       #!/bin/sh
-      #husky ${pkg.version}
+      #meteor-husky ${pkg.version}
 
       command_exists () {
         command -v "$1" >/dev/null 2>&1
@@ -98,7 +98,7 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
       `
       # Check that npm exists
       command_exists npm || {
-        echo >&2 "husky > can't find npm in PATH, skipping ${npmScriptName} script in package.json"
+        echo >&2 "meteor-husky > can't find npm in PATH, skipping ${npmScriptName} script in package.json"
         exit 0
       }
 
@@ -106,12 +106,12 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
       export GIT_PARAMS="$*"
 
       # Run npm script
-      echo "husky > meteor npm run -s ${npmScriptName} (node \`node -v\`)"
+      echo "meteor-husky > meteor npm run -s ${npmScriptName} (node \`node -v\`)"
       echo
 
       meteor npm run -s ${npmScriptName} || {
         echo
-        echo "husky > ${hookName} hook failed ${noVerifyMessage}"
+        echo "meteor-husky > ${hookName} hook failed ${noVerifyMessage}"
         exit 1
       }
       `
