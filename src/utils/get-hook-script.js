@@ -46,7 +46,7 @@ function platformSpecific() {
       stripIndent(
         `
         # nvm path with standard installation
-        load_nvm ${home}/.nvm`
+        # load_nvm ${home}/.nvm`
       )
     )
 
@@ -97,8 +97,8 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
     stripIndent(
       `
       # Check that npm exists
-      command_exists npm || {
-        echo >&2 "meteor-husky > can't find npm in PATH, skipping ${npmScriptName} script in package.json"
+      command_exists meteor || {
+        echo >&2 "meteor-husky > can't find meteor in PATH, skipping ${npmScriptName} script in package.json"
         exit 0
       }
 
@@ -106,7 +106,7 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
       export GIT_PARAMS="$*"
 
       # Run npm script
-      echo "meteor-husky > meteor npm run -s ${npmScriptName} (node \`node -v\`)"
+      echo "meteor-husky > meteor npm run -s ${npmScriptName} (meteor node \`meteor node -v\`)"
       echo
 
       meteor npm run -s ${npmScriptName} || {
