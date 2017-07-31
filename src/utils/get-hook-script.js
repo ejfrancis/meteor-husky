@@ -106,10 +106,10 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
       export GIT_PARAMS="$*"
 
       # Run npm script
-      echo "husky > npm run -s ${npmScriptName} (node \`node -v\`)"
+      echo "husky > meteor npm run -s ${npmScriptName} (node \`node -v\`)"
       echo
 
-      npm run -s ${npmScriptName} || {
+      meteor npm run -s ${npmScriptName} || {
         echo
         echo "husky > ${hookName} hook failed ${noVerifyMessage}"
         exit 1

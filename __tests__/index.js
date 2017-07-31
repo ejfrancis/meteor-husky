@@ -46,7 +46,7 @@ describe('husky', () => {
 
     expect(hook).toMatch('#husky')
     expect(hook).toMatch('cd "."')
-    expect(hook).toMatch('npm run -s precommit')
+    expect(hook).toMatch('meteor npm run -s precommit')
     expect(hook).toMatch('--no-verify')
 
     const prepareCommitMsg = readFile(dir, '.git/hooks/prepare-commit-msg')
