@@ -1,6 +1,6 @@
 {
   "name": "meteor-husky",
-  "version": "0.14.5",
+  "version": "0.14.6",
   "description": "Husky for the Meteor framework. Prevents bad commit or push (git hooks, pre-commit/precommit, pre-push/prepush, post-merge/postmerge and all that stuff...)",
   "engines": {
     "node": ">=4"
